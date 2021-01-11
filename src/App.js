@@ -27,15 +27,28 @@ class App extends Component {
     this.setState({data:myArray})
   }
 
+  onChange(event){
+    this.setState({type:event.target.value})
+  }
   render(){
 
     return(
       <div>
         <Header/>
         <Content title="Hello React" name="Naruephon Sooksinchai" position="System Engineer" workplace="Hoya Optics (Thailand) Ltd."/>
-        <button onClick={this.changeMessage}>{this.state.message}</button>
-        <button onClick={this.insertData}>Insert</button>
+        <button class="btn btn-primary" onClick={this.changeMessage}>{this.state.message}</button>
+        <br/>
+        <br/>
+        <button class="btn btn-success" onClick={this.insertData}>Insert</button>
+        <br/>
+        <br/>
         <h1>{this.state.data}</h1>
+        <br/>
+        <br/>
+        <input class="form-control" type="text" onChange={this.onChange.bind(this)}/>
+        <br/>
+        <br/>
+        <h1>Welcome : {this.state.type}</h1>
         <Footer/>
       </div>
     );
