@@ -6,17 +6,17 @@ class Content extends Component {
     return(
       <div class="container">
         <div class="row">
-          <div class="col-sm-4">
-            <h3>Column 1</h3>
-            <p>Lorem ipsum dolor..</p>
+          <div class="col-sm-3">
+            <h3>{this.props.title}</h3>
           </div>
-          <div class="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor..</p>
+          <div class="col-sm-3">
+            <h3>{this.props.name}</h3>
           </div>
-          <div class="col-sm-4">
-            <h3>Column 3</h3>
-            <p>Lorem ipsum dolor..</p>
+          <div class="col-sm-3">
+            <h3>{this.props.position}</h3>
+          </div>
+          <div class="col-sm-3">
+            <h3>{this.props.workplace}</h3>
           </div>
         </div>
       </div>
